@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import NavBar from './Component/NavBar'
+import reducer from './State/reducer'
+import TreeView from './Component/TreeView'
+import Footer from './Component/Footer'
 
+export const appContext = React.createContext({});
 function App() {
+  const [state, dispatch] = React.useReducer(reducer, {data:{}});
+ 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    <>
+      <appContext.Provider value={{state,dispatch}}>
+      <NavBar />
+      <TreeView />
+      <Footer/> 
+      </appContext.Provider>
+    </>)
 }
 
 export default App;
+
