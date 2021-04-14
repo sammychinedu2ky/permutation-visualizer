@@ -16,7 +16,7 @@ function Navigation() {
         <Stack direction="row" spacing={4} width={["20%", "40%", "25%"]}>
           <Image src={logo} boxSize="10" />
           <Heading size="4md" visibility={["hidden", "visible"]}>
-            Permutation <br /> Virtualizer
+            Permutation <br /> Visualizer
           </Heading>
         </Stack>
         <SearchBar />

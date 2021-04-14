@@ -1,5 +1,5 @@
 import React from 'react';
-import NavBar from './Component/NavBar'
+import NavBar from './Component/Header'
 import reducer from './State/reducer'
 import TreeView from './Component/TreeView'
 import Footer from './Component/Footer'
