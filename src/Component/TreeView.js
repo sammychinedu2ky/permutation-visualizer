@@ -29,6 +29,9 @@ function TreeView() {
           orientation="vertical"
           pathFunc={straightPathFunc}
           translate={translate}
+          rootNodeClassName="node__root"
+        branchNodeClassName="node__branch"
+        leafNodeClassName="node__leaf"
         />
       </Box>
     </>
