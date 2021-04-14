@@ -3,14 +3,16 @@ import permutationAlgorithm from "../permutationAlgorithm";
 function reducer(state, action) {
   switch (action.type) {
     case "generate":
-      let res = permutationAlgorithm(action.word);
-    
-      return { ...state, data: res,  };
-    case "print":
-        console.log('hello')
-        return {...state,input:action.input}
+      let word = action.word;
+      let wordLength = word.length;
+      let factorial = (n) => (n === 2 ? 2 : n * factorial(n - 1));
+      let res = permutationAlgorithm(word);
+      let permutation = factorial(wordLength);
+      return { ...state, data: res, possible: permutation };
+    case "input":
+      return { ...state, input: action.input };
     default:
-      return {...state};
+      return { ...state };
   }
 }
 

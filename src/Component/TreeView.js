@@ -17,7 +17,7 @@ function TreeView() {
     });
   }, [translate.x]);
 
-  const straightPathFunc = (linkDatum, orientation) => {
+  const straightPathFunc = (linkDatum) => {
     const { source, target } = linkDatum;
     return `M${source.x},${source.y}L${target.x},${target.y}`;
   };

@@ -5,9 +5,9 @@ function permutation(arr, data = {}, index = 0) {
       data.children = [];
       data.attributes = {
         fixed: index > 0 ? arr.join("").slice(0, index) : arr.join(""),
-        swap: `${arr.join("")}[${index}] with ${arr.join("")}[${index + 1}  ${
+        swap: `${arr.join("")}[${index}] with ${arr.join("")}[${index + 1}${
           index + 1 === arr.length - 1 ? "" : `...${arr.length - 1}`
-        }  ] `,
+        }]`,
       };
       for (let i = index; i < arr.length; i++) {
         let newArr = [...arr];

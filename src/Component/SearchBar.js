@@ -5,9 +5,8 @@ function SearchBar() {
   const context = useContext(appContext);
 
   const handleChange = ({ target }) => {
-    console.log(context.state);
     context.dispatch({
-      type: "print",
+      type: "input",
       input: target.value,
     });
   };
