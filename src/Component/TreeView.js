@@ -7,8 +7,14 @@ function TreeView() {
     x: 0,
     y: 0,
   });
+ 
+  let handleResize = ()=>{
+    setTranslate({x:0,y:0})
+  }
+  window.addEventListener('resize', handleResize)
   let context = useContext(appContext);
   let boxRef = useRef(null);
+
   useEffect(() => {
     let dimensions = boxRef.current.getBoundingClientRect();
     setTranslate({
