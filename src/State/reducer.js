@@ -5,7 +5,7 @@ function reducer(state, action) {
     case "generate":
       let word = action.word;
       let wordLength = word.length;
-      let factorial = (n) => (n === 2 ? 2 : n * factorial(n - 1));
+      let factorial = (n) => (n === 1 ? 1 : n * factorial(n - 1));
       let res = permutationAlgorithm(word);
       let permutation = factorial(wordLength);
       return { ...state, data: res, possible: permutation };
