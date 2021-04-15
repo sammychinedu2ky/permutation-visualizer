@@ -4,7 +4,7 @@ function permutation(arr, data = {}, index = 0) {
       let temp = [];
       data.children = [];
       data.attributes = {
-        fixed: index > 0 ? arr.join("").slice(0, index) : arr.join(""),
+        fixed: index > 0 ? arr.join("").slice(0, index) : "none",
         swap: `${arr.join("")}[${index}] with ${arr.join("")}[${index + 1}${
           index + 1 === arr.length - 1 ? "" : `...${arr.length - 1}`
         }]`,
