@@ -5,7 +5,7 @@ This project is basically a small web app that tries to visualize the permutatio
 You can check out the deployed site [here](https://permutationvisualizer.netlify.app/)
 
 
-- Build by Samson Amaugo
+- Built by Samson Amaugo
 - website: https://swacblooms.com
 - twitter: 
      - https://twitter.com/swacblooms 
